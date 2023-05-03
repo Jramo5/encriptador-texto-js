@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/mediaqueries.css">
+    <title>Alura - Encriptador de Texto</title>
+</head>
+
+<body class="d-flex">
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./img/Logo.svg" alt="Logo Alura">
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div class="container d-flex">
+            <form action="form" >
+                <div class="text-area">
+                    <textarea name="texto-sinEncriptar" class="d-flex" id="text" placeholder="Ingrese el texto aqui"></textarea>
+                </div>
+                <div class="area-btn">
+                    <div class="area-mensaje d-flex">
+                        <img src="./img/bi_exclamation-circle-fill.svg" alt="svg">
+                        <p>Solo letras minúsculas sin acentos.</p>
+                    </div>
+                    <div class="btn d-flex">
+                        <button type="button" class="btn-encriptar" id="btn-encriptar">Encriptar</button>
+                        <button type="button" class="btn-desencriptar" id="btn-desencriptar">Desencriptar</button>
+                    </div>
+                </div>
+            </form>
+            <div id="modal-error" class="modalTextError">
+                <div class="modal-error-header d-flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi-exclamation-triangle-fill" viewBox="0 0 20 20">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                    <h3>¡ERROR!</h3>
+                    <button class="btn-cerrar" id="mensaje-error">X</button>
+                </div>
+                <div class="modal-error-body">
+                    <h4>Haz ingresado un caracter invalido. Toma en cuenta lo siguiente:</h4>
+                    <ul>
+                        <li>No ingresar letras en mayusculas</li>
+                        <li>No ingresar acentos en las palabras.</li>
+                        <li>No ingresar signos exclamativos</li>
+                        <li>No ingresar signos interrogativos</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal d-flex" id="modal">
+                <div class="alerta" id="alerta">
+                    <div class="area-btn-cerrar d-flex">
+                        <button id="cerrar" class="cerrarVentana">X</button>
+                    </div>
+                    <div class="ventana-contenido d-flex">
+                        <h3>¡Hola bienvenido a mi Proyecto para Alura Latam!</h3>
+                        <a href="https://github.com/jramo5" target="_blank">
+                            <img src="./img/github.webp" alt="github">
+                        </a>
+                        <a href="https://github.com/jramo5">Github / jramo5</a>
+                        <p>Te invito a que visites mis futuros proyectos</p>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+    </main>
+
+    <aside class="d-flex">
+        <div class="img">
+            <img src="./img/Muñeco.webp" alt="Muñeco buscador">
+        </div>
+        <div class="texto-encriptado">
+            <p id="ningun-mensaje">Ningun mensaje fue encontrado</p>
+            <textarea name="texto-encriptado" id="texto-encriptado"
+                placeholder="Ingresa el texto que desees encriptar o desencriptar" disabled></textarea>
+        </div>
+        <div class="area-btn-copiar">
+            <button class="btn-copiar btn-copiarText" id="btn-copiar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="clipboard" class="bi-clipboard clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" id="clipboard-check" class="bi-clipboard-check clipboard" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                    <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                    <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                </svg>
+                <span id="text-copiar">Copiar</span>    
+            </button>
+        </div>
+        <div id="modal-mensaje-copiado" class="mensaje-copiado-entrada">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi-clipboard-check-fill" viewBox="0 0 16 16">
+                <path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/>
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/>
+            </svg>
+            <p>¡Texto copiado con exito al portapapeles!</p>
+        </div>
+    </aside>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
