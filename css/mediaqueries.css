@@ -1,0 +1,128 @@
+@media screen and (min-width:720px) {
+
+    main .container .text-area>textarea {
+        width: 96%;
+    }
+
+    main .container .text-area>textarea::placeholder {
+        top: 0;
+        left: 0;
+        text-align: start;
+        transform: none;
+    }
+
+    main .container .area-btn .area-mensaje {
+        justify-content: start;
+        width: 96%;
+        margin: 10px auto;
+    }
+
+    main .container .area-btn .area-mensaje>p {
+        font-size: 1rem;
+    }
+
+    main .container .btn {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    main .container .modal .alerta {
+        width: 400px;
+    }
+
+    main .container .modal .alerta .ventana-contenido {
+        margin-top: 20px;
+    }
+
+    main .container .modal .alerta .ventana-contenido a:nth-child(3) {
+        margin-top: 20px;
+    }
+
+    #modal-mensaje-copiado{
+        width:80%;
+        top: 0%;
+        left: 10%;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+
+    body {
+        flex-direction: row;
+        height: 90vh;
+    }
+
+    header .logo>a>img {
+        width: 25px;
+        margin: 25px 0px 0px 50px;
+    }
+
+    main {
+        margin-top: 80px;
+        width: 65%;
+    }
+
+    main .container .text-area>textarea {
+        width: 80%;
+        margin: -40px auto;
+    }
+
+    main .container .area-btn .area-mensaje {
+        width: 80%;
+        margin-top: -10px;
+        margin-bottom: 10px;
+    }
+
+    main .container .btn {
+        margin: 15px auto;
+        width: 80%;
+        justify-content: start;
+    }
+
+    #modal-error {
+        top: 30%;
+        left: 25%;
+        width: 50%;
+    }
+
+    main .container .btn .btn-encriptar,
+    main .container .btn .btn-desencriptar {
+        width: 250px;
+        height: 55px;
+        border-radius: 20px;
+        margin: 0;
+    }
+
+    aside {
+        margin-top: 40px;
+        width: 25%;
+        height: 98%;
+    }
+
+    aside .img>img {
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+
+    aside>.texto-encriptado {
+        width: 90%;
+    }
+
+    aside>.texto-encriptado>p {
+        display: block;
+        font-size: 16px;
+    }
+
+    aside>.texto-encriptado>textarea {
+        width: 90%;
+    }
+
+    #modal-mensaje-copiado{
+        width:35%;
+        top: -10%;
+        left: 30%;
+        transform: translate(-10%, -50%);
+    }
+}
