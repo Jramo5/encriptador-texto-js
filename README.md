@@ -1,5 +1,5 @@
-# Encriptador de Texto
-<p>Proyecto Creado para el programa de Alura Latam & Oracle One Next Educations.</p>
+# CHALLENGE -- Encriptador de Texto -- 
+<p>Proyecto Creado como parte de un desafio del programa de Alura Latam & Oracle One Next Education.</p>
 
 ## Diseño UI
 
