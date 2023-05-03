@@ -1,0 +1,1 @@
+# encriptador-texto-js
