@@ -104,16 +104,18 @@ main .container .area-btn .area-mensaje>p {
 }
 
 main .container .btn {
-    margin: 50px auto 10px;
-    justify-content: center;
+    width: 100%;
+    margin-top: 50px;
     flex-direction: column;
+    justify-content: center;
     gap: 24px;
+    margin-bottom: 10px;
 }
 
 main .container .btn .btn-encriptar {
     display: block;
     margin: auto;
-    width: 343px;
+    width: 97%;
     height: 67px;
     background-color: var(--colorTexto);
     border-radius: 24px;
@@ -133,7 +135,7 @@ main .container .btn .btn-encriptar:hover {
 main .container .btn .btn-desencriptar {
     display: block;
     margin: auto;
-    width: 343px;
+    width: 97%;
     height: 67px;
     background-color: var(--colorBlanco2);
     border-radius: 24px;
